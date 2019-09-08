@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
+  padding: 1rem;
   font-family: 'Source Sans Pro', sans-serif;
-  min-height: 100vh;
-  padding: 2rem;
-  font-size: 1rem;
+  min-height: calc(100vh);
+  font-size: 2rem;
+  background: #0f0c46;
 }

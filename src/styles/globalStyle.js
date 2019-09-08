@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
+import { Color } from './variables'
+
 export default createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -43,7 +45,7 @@ html, body, #root {
 }
 
 body {
-  background: #0f0c46;
+  background: ${Color.bg};
   color: #fff;
 	line-height: 1;
   font-family: 'Source Sans Pro', sans-serif;
