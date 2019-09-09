@@ -8,6 +8,20 @@ const Sidebar = () => {
       <S.ButtonMenu>
         <S.IconMenuAltRight />
       </S.ButtonMenu>
+      <S.NavList>
+        <S.NavLink title="User" to="/">
+          <S.IconUser />
+        </S.NavLink>
+        <S.NavLink title="Plan" to="/">
+          <S.IconCreditCard />
+        </S.NavLink>
+        <S.NavLink title="Divided date" to="/">
+          <S.IconCalendar />
+        </S.NavLink>
+        <S.NavLink title="Messages" to="/">
+          <S.IconEnvelope />
+        </S.NavLink>
+      </S.NavList>
     </S.Sidebar>
   )
 }

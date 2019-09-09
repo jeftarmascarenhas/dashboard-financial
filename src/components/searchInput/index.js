@@ -4,10 +4,14 @@ import PropTypes from 'prop-types'
 import { EXCHANGE } from 'routes'
 import * as S from './styled'
 
-const renderList = datasource =>
+const renderList = (datasource, onClose) =>
   datasource.length ? (
     datasource.map(item => (
-      <S.SearchILink key={item.id} to={`${EXCHANGE}/${item.id}`}>
+      <S.SearchILink
+        key={item.id}
+        onClick={onClose}
+        to={`${EXCHANGE}/${item.id}`}
+      >
         <S.SearchTitle>
           <S.SearchItemLabel>Symbol</S.SearchItemLabel>
           {item.title}
@@ -59,7 +63,7 @@ function SearchInput({
         {loading ? (
           <S.SearchItemEmpty>Loading...</S.SearchItemEmpty>
         ) : (
-          renderList(datasource)
+          renderList(datasource, handleSearchHide)
         )}
       </S.SearchData>
     </S.SearchContent>

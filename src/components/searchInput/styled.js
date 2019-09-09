@@ -59,6 +59,7 @@ export const SearchIcon = styled(Search)`
   color: ${({ color }) => (!color ? `${Color.white}` : `${color}`)};
   width: 25px;
   height: 25px;
+  cursor: pointer;
 `
 export const SearchILink = styled(Link)`
   ${searchStyle}
