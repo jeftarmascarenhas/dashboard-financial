@@ -1,4 +1,4 @@
 export const HOME = '/'
-export const EXCHANGE = '/exchange/:symbol?'
+export const EXCHANGE = '/exchange'
 export const LOGIN = '/login'
-export const PAGE404 = '/404'
+export const PAGE404 = '*'

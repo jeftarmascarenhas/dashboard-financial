@@ -5,4 +5,6 @@ export const Color = {
   secondary: '#ff2d5d',
   shadow: 'rgba(0, 0, 0, 0.6)',
   error: '#ff2d5d',
+  text: '#fff',
+  white: '#fff',
 }

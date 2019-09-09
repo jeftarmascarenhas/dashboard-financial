@@ -5,9 +5,9 @@ class ExchangeService {
     )
   }
 
-  static getSymbolSearch() {
+  static getSymbolSearch(search) {
     return fetch(
-      'https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=AAPL34&apikey=GV3PBTZFHLTL96WS',
+      `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${search}&apikey=GV3PBTZFHLTL96WS`,
     )
   }
 }
