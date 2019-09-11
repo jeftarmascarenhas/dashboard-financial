@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { UpArrow } from 'styled-icons/boxicons-solid/UpArrow'
+import { DownArrow } from 'styled-icons/boxicons-solid/DownArrow'
 
 import { Color } from 'styles/variables'
 
@@ -9,7 +11,7 @@ export const Content = styled.div`
 export const Header = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.8rem;
 `
 
 export const SpaceLeft = styled.div`
@@ -19,4 +21,14 @@ export const SpaceLeft = styled.div`
 export const LabelTitle = styled.h4`
   color: ${Color.white};
   font-size: 1.2rem;
+`
+export const IconUpArrow = styled(UpArrow)`
+  color: ${Color.primary};
+  width: 12px;
+  height: 12px;
+`
+export const IconDownArrow = styled(DownArrow)`
+  color: ${Color.secondary};
+  width: 10px;
+  height: 10px;
 `

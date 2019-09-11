@@ -13,6 +13,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "react-styled-flexboxgrid": "^3.1.0",
+    "recharts": "^1.7.1",
     "styled-components": "^4.3.2",
     "styled-icons": "^8.4.1",
     "typeface-source-sans-pro": "^0.0.75",

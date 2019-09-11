@@ -1,7 +1,10 @@
 import React from 'react'
 import { Grid, Col, Row } from 'react-styled-flexboxgrid'
 
+import { fundsListing, customerVisits } from 'fake-data/homeData'
 import Card, { CardBody } from 'components/card'
+import ListGroup, { ListGroupItem } from 'components/listGroup'
+import { LineChartData } from 'components/charts'
 import * as T from 'styles/typograph'
 import * as C from 'styles/common'
 import * as S from './styled'
@@ -18,12 +21,43 @@ function Home() {
                 <C.Tag>+13.94%</C.Tag>
               </S.SpaceLeft>
             </S.Header>
-            <C.Box borderColor>
+            <C.Box gutterBottom borderColor>
               <h4>Customer Visits</h4>
+              <br />
+              <LineChartData data={customerVisits} />
             </C.Box>
-            <C.Box>
-              <h4>Exchange Listing</h4>
-            </C.Box>
+            <Row>
+              <Col xs={12}>
+                <T.SubTitle>Funds Listing</T.SubTitle>
+                {fundsListing.map(fund => (
+                  <Card gutterBottom key={fund.id}>
+                    <CardBody>
+                      <ListGroup>
+                        <C.Tag>{fund.id}</C.Tag>
+                        <ListGroupItem>{fund.name}</ListGroupItem>
+                        {fund.infos.map(info => (
+                          <ListGroupItem aligText="center" key={info.id}>
+                            <span className="label">{`${info.year} year`}</span>
+                            <span>
+                              {info.percent > 0 ? (
+                                <S.IconUpArrow />
+                              ) : (
+                                <S.IconDownArrow />
+                              )}
+                              {`${info.percent}%`}
+                            </span>
+                          </ListGroupItem>
+                        ))}
+                        <ListGroupItem>{fund.coat}</ListGroupItem>
+                        <C.Tag type={fund.risk === 'high' && 'secondary'}>
+                          {fund.riskName}
+                        </C.Tag>
+                      </ListGroup>
+                    </CardBody>
+                  </Card>
+                ))}
+              </Col>
+            </Row>
           </Col>
           <Col xs={12} sm={4}>
             <Card>

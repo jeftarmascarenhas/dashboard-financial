@@ -8,6 +8,7 @@ export const Color = {
   error: '#ff2d5d',
   text: '#fff',
   white: '#fff',
+  textMuted: '#6c757d',
   success: '#38b34dfc',
 }
 

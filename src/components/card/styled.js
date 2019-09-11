@@ -3,8 +3,9 @@ import styled from 'styled-components'
 import { Color } from 'styles/variables'
 
 export const Card = styled.div`
-  background-color: #181757;
+  background-color: #11104e;
   color: #fff;
+  margin-bottom: ${({ gutterBottom }) => (gutterBottom ? '2rem' : 'auto')};
   box-shadow: ${({ shadow }) =>
     shadow ? `0 0 2rem ${Color.shadow} ` : 'none'};
   border-radius: ${({ radius }) => (radius ? '0.3rem' : '0')};

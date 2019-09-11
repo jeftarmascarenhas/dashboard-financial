@@ -135,11 +135,13 @@ article, aside, details, figcaption, figure,
   input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
   }
-  *::placeholder {
-    color: var(--secondaryColor);
+  ${
+    '' /* *::placeholder {
+    color: #aaaaaa;
   }
   *::-webkit-input-placeholder {
-    color: var(--secondaryColor);
+    color: var(#aaaaaa);
+  } */
   }
 
   @media (prefers-reduced-motion: reduce) {
