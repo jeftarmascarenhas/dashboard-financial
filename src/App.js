@@ -42,7 +42,7 @@ function App({ location }) {
   }
 
   return (
-    <Suspense fallback={<div>Ladining app...</div>}>
+    <Suspense fallback={<div>Starting App</div>}>
       <Switch>
         <Route path={LOGIN} component={Login} />
         <Route component={MainPage} />
