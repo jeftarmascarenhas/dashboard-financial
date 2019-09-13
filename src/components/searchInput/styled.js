@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { Search } from 'styled-icons/evil/Search'
 import { Close } from 'styled-icons/evil/Close'
 import { Link } from 'react-router-dom'
-import { lighten, transitions } from 'polished'
+import { lighten, transitions, rgba } from 'polished'
 
 import { Color } from 'styles/variables'
 
@@ -18,6 +18,7 @@ const searchStyle = css`
 `
 
 export const SearchContent = styled.div`
+  width: 100%;
   display: flex;
   height: 6.375rem;
   align-items: center;
@@ -33,7 +34,7 @@ export const SearchData = styled.div`
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   padding: 0 1rem;
   padding-bottom: 2rem;
   overflow-y: hidden;
@@ -54,6 +55,9 @@ export const SearchInput = styled.input`
   height: 100%;
   background: transparent;
   font-size: 1.4rem;
+  &::placeholder {
+    color: ${rgba(Color.iconColor, 0.9)};
+  }
 `
 export const SearchIcon = styled(Search)`
   color: ${({ color }) => (!color ? `${Color.white}` : `${color}`)};
@@ -88,6 +92,7 @@ export const SearchCloseIcon = styled(Close)`
   color: ${({ color }) => (!color ? `${Color.white}` : `${color}`)};
   width: 28px;
   height: 28px;
+  cursor: pointer;
 `
 export const SearchHeader = styled.div`
   display: flex;

@@ -32,7 +32,10 @@ function Home() {
                 {fundsListing.map(fund => (
                   <Card gutterBottom key={fund.id}>
                     <CardBody>
-                      <ListGroup>
+                      <ListGroup
+                        alignItems="center"
+                        justifyContent="space-between"
+                      >
                         <C.Tag>{fund.id}</C.Tag>
                         <ListGroupItem>{fund.name}</ListGroupItem>
                         {fund.infos.map(info => (

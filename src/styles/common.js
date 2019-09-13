@@ -3,6 +3,14 @@ import { lighten, rgba } from 'polished'
 
 import { Color } from 'styles/variables'
 
+export const Content = styled.div`
+  padding: 3rem 0;
+  width: 100%;
+  @media (min-width: 968px) {
+    padding: 5rem 1rem 5rem 5rem;
+  }
+`
+
 export const Tag = styled.span`
   display: inline-block;
   vertical-align: baseline;

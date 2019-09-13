@@ -14,15 +14,15 @@ const Main = () => (
   <>
     <Suspense fallback="Loading...">
       <S.Wrapper>
-        <Sidebar />
-        <S.Content>
-          <Header />
+        <Header />
+        <S.ContentFlex>
+          <Sidebar />
           <Switch>
             <Route path={HOME} exact component={Home} />
             <Route path={`${EXCHANGE}/:symbol`} component={Exchange} />
             <Route path={PAGE404} component={Page404} />
           </Switch>
-        </S.Content>
+        </S.ContentFlex>
       </S.Wrapper>
     </Suspense>
   </>

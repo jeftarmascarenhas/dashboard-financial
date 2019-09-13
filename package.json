@@ -69,9 +69,6 @@
     "react-hot-loader": "^4.12.12",
     "require-context.macro": "^1.1.1"
   },
-  "alias": {
-    "react-dom": "@hot-loader/react-dom"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run format-code"

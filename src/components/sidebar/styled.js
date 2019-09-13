@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
-import { MenuAltRight } from 'styled-icons/boxicons-regular/MenuAltRight'
 import { User } from 'styled-icons/evil/User'
 import { CreditCard } from 'styled-icons/evil/CreditCard'
 import { Calendar } from 'styled-icons/evil/Calendar'
@@ -16,13 +15,15 @@ const iconStyles = css`
 `
 
 export const Sidebar = styled.div`
-  width: 6.375rem;
   min-height: calc(100vh);
+  border-right: 1px solid ${Color.iconColor};
+  display: none;
+  @media (min-width: 968px) {
+    display: block;
+    width: 6.375rem;
+  }
 `
 
-export const IconMenuAltRight = styled(MenuAltRight)`
-  ${iconStyles}
-`
 export const IconUser = styled(User)`
   ${iconStyles}
 `
@@ -41,7 +42,6 @@ export const NavList = styled.nav`
   align-items: center;
   min-height: calc(100%);
   padding-top: ${Metrics.space * 10}rem;
-  border-right: 1px solid ${Color.iconColor};
 `
 export const NavLink = styled(Link)`
   display: inline-block;
@@ -100,24 +100,5 @@ export const NavLink = styled(Link)`
     height: 0;
     width: 0.2rem;
     opacity: 0;
-  }
-`
-
-export const ButtonMenu = styled.button`
-  border: 0;
-  border-bottom: 1px solid ${Color.iconColor};
-  border-right: 1px solid ${Color.iconColor};
-  box-shadow: none;
-  outline: none;
-  width: 6.375rem;
-  min-height: 6.375rem;
-  cursor: pointer;
-  > svg {
-    ${transitions(`all ${Timings.animationTime} ease-in-out`)}
-  }
-  &:hover {
-    svg {
-      color: ${Color.white};
-    }
   }
 `

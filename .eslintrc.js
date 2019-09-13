@@ -42,5 +42,6 @@ module.exports = {
       },
     ],
     'react/state-in-constructor': 0,
+    'jsx-a11y/label-has-associated-control': 'off',
   },
 }

@@ -3,6 +3,7 @@ export const Color = {
   bgSecondary: '#181757',
   iconColor: '#2f3779',
   primary: '#0093fe',
+  cardBg: '#11104e',
   secondary: '#ff2d5d',
   shadow: 'rgba(0, 0, 0, 0.6)',
   error: '#ff2d5d',

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Color } from 'styles/variables'
 
 export const Card = styled.div`
-  background-color: #11104e;
+  background-color: ${Color.cardBg};
   color: #fff;
   margin-bottom: ${({ gutterBottom }) => (gutterBottom ? '2rem' : 'auto')};
   box-shadow: ${({ shadow }) =>

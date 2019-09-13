@@ -5,7 +5,11 @@ import { DownArrow } from 'styled-icons/boxicons-solid/DownArrow'
 import { Color } from 'styles/variables'
 
 export const Content = styled.div`
-  padding: 5rem 1rem 5rem 5rem;
+  width: 100%;
+  padding: 3rem 0;
+  @media (min-width: 968px) {
+    padding: 5rem 1rem 5rem 5rem;
+  }
 `
 
 export const Header = styled.div`

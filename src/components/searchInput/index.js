@@ -47,6 +47,9 @@ function SearchInput({
   return (
     <S.SearchContent>
       <S.SearchIcon />
+      <label htmlFor={id} className="sr-only">
+        Search Symbol
+      </label>
       <S.SearchInput
         id={id}
         name={name}
@@ -82,7 +85,7 @@ SearchInput.propTypes = {
 
 SearchInput.defaultProps = {
   value: '',
-  id: 'search1',
+  id: 'searchInput',
   name: '',
   placeholder: 'Search',
   datasource: [],

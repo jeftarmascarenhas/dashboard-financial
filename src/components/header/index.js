@@ -26,7 +26,7 @@ const Header = () => {
       setLoading(false)
     } catch (error) {
       setLoading(false)
-      alert(error)
+      console.log(error)
     }
   }
   const handleChange = event => {
@@ -38,13 +38,17 @@ const Header = () => {
   }
 
   return (
-    <S.Header>
+    <S.Header data-testid="app-header">
+      <S.ButtonMenu>
+        <S.IconMenuAltRight />
+      </S.ButtonMenu>
       <SearchInput
         onChange={handleChange}
         value={searchString}
         loading={loading}
         placeholder="Ex: ITSA4"
         datasource={searchData}
+        data-testid="searchSymbol"
       />
     </S.Header>
   )
